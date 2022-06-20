@@ -1,0 +1,45 @@
+<div class="card w-100 my-5 shadow">
+    <div class="card-body">
+        <h1 class="card-title text-center">
+            Formulário de Usuários
+        </h1>
+        <form [formGroup]="userForm">
+            <div class="row my-4">
+                <div class="form-floating w-50">
+                    <input type="nome" class="form-control" id="nomeForm" formControlName="first_name"
+                        placeholder="Digite seu nome">
+                    <label for="nomeForm">Nome</label>
+                </div>
+                <div class="form-floating w-50">
+                    <input type="sobrenome" class="form-control" id="sobrenomeForm" formControlName="last_name"
+                        placeholder="Digite seu sobrenome">
+                    <label for="sobrenomeForm">Sobrenome</label>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="form-floating w-50">
+                    <input type="number" class="form-control" id="idadeForm" formControlName="age"
+                        placeholder="Digite seu idade">
+                    <label for="idadeForm">Idade</label>
+                </div>
+                <div class="form-floating w-50">
+                    <input type="text" class="form-control" id="profissaoForm" formControlName="job"
+                        placeholder="Digite seu profissao">
+                    <label for="profissaoForm">Profissão</label>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="form-group col-12 mt-4">
+                    <button (click)="actionButton()" type="button" class="btn btn-outline-success float-end">
+                        <fa-icon [icon]="faSave"></fa-icon>
+                        Salvar
+                    </button>
+                    <button type="button" class="btn btn-outline-danger float-start">
+                        <fa-icon [icon]="faTimes"></fa-icon>
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
